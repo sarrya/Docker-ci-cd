@@ -37,7 +37,9 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build Docker image
-      run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/devops-app:latest .
+      run: |
+        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/devops-app:latest .
 
     - name: Push Docker image
-      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/devops-app:latestcker build -t devops-app:latest .
+      run: |
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/devops-app:lates
